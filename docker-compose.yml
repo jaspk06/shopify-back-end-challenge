@@ -1,12 +1,12 @@
 version: '3'
 
 services:
-  nodejs:
+  gallery-api:
     build:
       context: .
       dockerfile: Dockerfile
-    image: nodejs
-    container_name: nodejs
+    image: gallery-api
+    container_name: gallery-api
     restart: unless-stopped
     env_file: .env
     environment:
@@ -19,12 +19,12 @@ services:
       - "8080:8080"
       - "9229:9229"
     volumes:
+      - ./build:/home/node/app/build
       - ./src:/home/node/app/src
       - ./test:/home/node/app/test
       - ./nodemon.json:/home/node/app/nodemon.json
     networks:
       - app-network
-    command: npm run dev
 
   db:
     image: mongo

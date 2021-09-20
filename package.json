@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "nodemon src/index.ts",
     "build": "tsc",
-    "test": "mocha --timeout 30000 --exit -r ts-node/register test/**/*.test.ts"
+    "test": "mocha --timeout 30000 --exit -r ts-node/register test/**/*.test.ts",
+    "prod" : "npm run test && npm run build && node build/index.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
