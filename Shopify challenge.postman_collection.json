@@ -118,7 +118,12 @@
 						{
 							"key": "image",
 							"type": "file",
-							"src": "/C:/Users/jason/Downloads/yoav-aziz-tKCd-IWc4gI-unsplash.jpg"
+							"src": []
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": []
 						}
 					],
 					"options": {
@@ -169,7 +174,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/images/6147bf79c072b719da0c4015",
+					"raw": "http://localhost:8080/images/{{userId}}",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -177,7 +182,7 @@
 					"port": "8080",
 					"path": [
 						"images",
-						"6147bf79c072b719da0c4015"
+						"{{userId}}"
 					]
 				}
 			},
@@ -231,7 +236,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/images/delete/6141833179ee63cada534e55",
+					"raw": "http://localhost:8080/images/delete/{{userId}}",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -240,7 +245,7 @@
 					"path": [
 						"images",
 						"delete",
-						"6141833179ee63cada534e55"
+						"{{userId}}"
 					]
 				}
 			},
@@ -270,11 +275,11 @@
 	"variable": [
 		{
 			"key": "userId",
-			"value": ""
+			"value": "6141833179ee63cada534e55"
 		},
 		{
 			"key": "jwt token",
-			"value": ""
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjE0MTgzMzE3OWVlNjNjYWRhNTM0ZTU1IiwiZW1haWwiOiJ0ZXN0NUBnbWFpbC5jb20iLCJpYXQiOjE2MzE3MzM1NzAsImV4cCI6MTYzMTc0MDc3MH0.g3FjIgeS0_bjIaWSgVaN5PZmJxIfOobGCKlls1AIz5Q"
 		}
 	]
 }
