@@ -1,8 +1,8 @@
 import express, { Application } from 'express';
-import { routes } from './routes';
+import routes from './routes';
 
 // Boot express
-export const app: Application = express();
+const app: Application = express();
 
 app.use(express.json());
 
@@ -11,3 +11,5 @@ const db = require('./db');
 
 // Application routing
 routes(app);
+
+export default app;

@@ -1,4 +1,4 @@
-import jwt, { Secret } from 'jsonwebtoken';
+import jwt from 'jsonwebtoken';
 import { NextFunction, Request, Response } from 'express';
 
 const config = process.env;
