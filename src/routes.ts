@@ -1,15 +1,17 @@
 import { Application, Router } from 'express';
-import { IndexController } from './controllers/IndexController';
 import { UserController } from './controllers/UserController';
+import { ImagesController } from './controllers/ImagesController';
 
 const _routes: [string, Router][] = [
-  ['/', IndexController],
-  ['/user', UserController]
+  ['/user', UserController],
+  ['/images', ImagesController]
 ];
 
-export const routes = (app: Application) => {
+const routes = (app: Application) => {
   _routes.forEach((route) => {
     const [url, controller] = route;
     app.use(url, controller);
   });
 };
+
+export default routes;
